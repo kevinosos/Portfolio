@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kevin Osama – Web Development Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1eee6;--ink:#1c2321;--mute:#6b6f6a;--line:#d9d4c6;--wine:#4a1d27;--wine-tint:#eadfe0;--amber:#9a6412;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181a;--ink:#ece8dd;--mute:#9a9d96;--line:#2c3133;--wine:#e7b9c0;--wine-tint:#2a1c20;--amber:#e0a94f}}
+:root[data-theme="dark"]{--bg:#15181a;--ink:#ece8dd;--mute:#9a9d96;--line:#2c3133;--wine:#e7b9c0;--wine-tint:#2a1c20;--amber:#e0a94f}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;margin:0;letter-spacing:-.01em}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;font-weight:500}
+.mark{display:grid;place-items:center;width:2.25rem;height:2.25rem;border-radius:.5rem;background:var(--ink);color:var(--bg);font:600 1.1rem Fraunces,serif}
+nav{display:flex;gap:1.5rem;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.hero{padding:clamp(3.5rem,9vw,7rem) 0 clamp(3rem,7vw,5rem)}
+.hero h1{font-size:clamp(3.2rem,9.5vw,7.5rem);max-width:11ch}
+.hero p{max-width:36rem;margin:1.75rem 0 0;font-size:1.2rem;color:var(--mute)}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.95rem;color:var(--mute)}
+.facts b{color:var(--ink);font-weight:500}
+.work{padding:1rem 0 0}
+.panel{border-radius:1.25rem;padding:clamp(1.5rem,4vw,3rem);margin-bottom:1.5rem;display:grid;gap:2rem;grid-template-columns:1fr;overflow:hidden}
+@media(min-width:56rem){.panel{grid-template-columns:1fr 1.1fr;align-items:center}}
+.kind{font-size:.9rem;opacity:.7;margin:0 0 .75rem}
+.panel h2{font-size:clamp(2.4rem,5.5vw,4.25rem)}
+.panel p.lead{margin:1rem 0 0;max-width:30rem}
+.tag{display:inline-block;margin-top:1.25rem;padding:.25rem .85rem;border:1px solid currentColor;border-radius:99px;font-size:.85rem;font-weight:500}
+dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.25rem;margin:1.5rem 0 0;font-size:.95rem}
+dt{opacity:.65}dd{margin:0;font-weight:500}
+/* Steady */
+.steady{background:#f6f1ea;color:#1f1a1a;border:1px solid #e3d6d4}
+.steady h2{color:#4a1d27}
+.steady .built{background:#eadfe0;border-radius:.75rem;padding:1rem 1.25rem;margin-top:1.5rem;font-size:.95rem}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.phone{background:#fff;border:1px solid #ddd5cf;border-radius:1rem;padding:.7rem;font-size:.72rem;color:#1f1a1a;min-height:15rem}
+.seg{display:flex;background:#eceae3;border-radius:99px;padding:2px;margin-bottom:.7rem}
+.seg span{flex:1;text-align:center;padding:.25rem 0;border-radius:99px;color:#777}
+.seg .on{background:#4a1d27;color:#fff}
+.phone .big{font:400 1.7rem Fraunces,serif;color:#4a1d27;line-height:1}
+.phone small{display:block;color:#777;margin-top:.25rem}
+.bar{height:6px;background:#e4e1da;border-radius:9px;margin:.6rem 0}
+.ring{width:3.2rem;height:3.2rem;border-radius:50%;border:5px solid #e4e1da;margin:.6rem 0}
+/* Prime Metal */
+.prime{background:#0d1626;color:#eef2f8}
+.prime .mock{background:#16233a;border-radius:.9rem;padding:1.5rem}
+.prime .mock b{display:block;font:600 1.55rem/1.15 "DM Sans",sans-serif;margin:.5rem 0 1rem}
+.prime .btn{display:inline-block;background:#fff;color:#0d1626;padding:.5rem 1rem;font-size:.85rem;font-weight:700}
+.prime .cols{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.25rem;font-size:.85rem}
+.prime .cols span{background:#eef2f8;color:#0d1626;border-radius:.5rem;padding:.7rem}
+/* Timepiece */
+.time{background:#1f3328;color:#eef0e8}
+.time .tag{color:#e6b455}
+.time .mock{background:#f4f3ee;color:#1d2a22;border-radius:.9rem;display:grid;grid-template-columns:7rem 1fr;min-height:14rem;overflow:hidden}
+.time .side{background:#e8e7df;padding:1rem;font-size:.78rem;line-height:2}
+.time .main{padding:1.25rem}
+.time .main h3{font-size:1.4rem}
+.time .drop{margin-top:1rem;border:1.5px dashed #b9bdae;border-radius:.7rem;padding:1.4rem;text-align:center;font-size:.85rem}
+.time .drop span{display:inline-block;margin-top:.5rem;background:#3f6a50;color:#fff;border-radius:.4rem;padding:.3rem .8rem}
+/* Process */
+.how{padding:clamp(3rem,7vw,5rem) 0}
+.how h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:2rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:"Step " counter(s);display:block;font-size:.85rem;color:var(--mute)}
+.steps h3{font-size:1.5rem;margin:.25rem 0 .5rem}
+.steps p{margin:0;color:var(--mute)}
+.cta{background:var(--ink);color:var(--bg);border-radius:1.25rem;padding:clamp(2rem,5vw,3.5rem);margin-bottom:3rem}
+.cta h2{font-size:clamp(2rem,4.5vw,3.25rem)}
+.cta p{margin:1rem 0 0;font-size:1.15rem}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2rem;font-size:.9rem;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+@media(max-width:34rem){nav{display:none}.phones{grid-template-columns:1fr}.phone{min-height:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#top"><span class="mark">K</span>Kevin Osama</a>
+  <nav aria-label="Primary"><a href="#steady">Steady</a><a href="#prime">Prime Metal</a><a href="#stockroom">Timepiece Stockroom</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero" id="top">
+  <h1>Good ideas deserve good software.</h1>
+  <p>I’m Kevin, a fourth-year computer engineering student who builds useful websites and web apps. I combine hands-on engineering with AI tools to move from idea to working product, quickly and thoughtfully.</p>
+  <div class="facts"><span><b>Based in</b> Cairo, Egypt</span><span><b>Working</b> worldwide</span><span><b>Focus</b> web apps, websites, integrations</span></div>
+</section>
+
+<section class="work" aria-label="Selected work">
+
+<article class="panel steady" id="steady">
+  <div>
+    <p class="kind">Personal web app</p>
+    <h2>Steady</h2>
+    <p class="lead"><em>Small rituals, quiet progress, every day.</em> A habit and daily routine tracker that helps users organize recurring routines, record daily progress, and review weekly consistency.</p>
+    <dl><dt>Daily view</dt><dd>See planned rituals and what remains today</dd><dt>Weekly progress</dt><dd>Review consistency across the week</dd><dt>Habit matrix</dt><dd>Record daily check-ins across the month</dd><dt>Role</dt><dd>Web app developer</dd><dt>Type</dt><dd>Personal project (unpaid)</dd><dt>Timeline</dt><dd>Sep – Nov 2026</dd></dl>
+    <div class="built"><b>Built with</b> Supabase (login, database, reminder function), web push reminders, installable web app, hosted on Vercel. Designed with Stitch; built with an AI-assisted workflow.</div>
+  </div>
+  <div class="phones" aria-label="Steady app screens">
+    <div class="phone"><div class="seg"><span class="on">Day</span><span>Week</span><span>Habits</span></div><b>Monday, November 16</b><small>A disciplined mind, a tranquil day.</small><div class="ring"></div><small>0 of 3 planned · 3 left to go</small></div>
+    <div class="phone"><div class="seg"><span>Day</span><span class="on">Week</span><span>Habits</span></div><small>Nov 15 – Nov 21</small><div class="big">0%</div><small>of this week’s tasks and habits done</small><div class="bar"></div><small>5 days left in this week</small></div>
+    <div class="phone"><div class="seg"><span>Day</span><span>Week</span><span class="on">Habits</span></div><small>November 2026</small><div class="big">0%</div><small>0 / 6 rituals fulfilled this cycle</small><div class="bar"></div><b>Active ledger</b><small>Daily record across the month</small></div>
+  </div>
+</article>
+
+<article class="panel prime" id="prime">
+  <div>
+    <p class="kind">Website</p>
+    <h2>Prime Metal</h2>
+    <p class="lead">A B2B website presenting Prime Metal’s tinplate products and processing capabilities, with clear paths to company information and quote requests. A self-initiated, unpaid personal project, not client work.</p>
+  </div>
+  <div class="mock" role="img" aria-label="Prime Metal website preview">
+    <small>Precision tinplate solutions, est. 2021</small>
+    <b>Precision Tinplate. Engineered for High-Speed Presses.</b>
+    <span class="btn">Discover our story</span>
+    <div class="cols"><span>Engineered precision, zero compromise</span><span>Compliance and standards</span></div>
+  </div>
+</article>
+
+<article class="panel time" id="stockroom">
+  <div>
+    <p class="kind">Experimental web app</p>
+    <h2>Timepiece Stockroom</h2>
+    <span class="tag">Experimental / incomplete</span>
+    <p class="lead">An unfinished experiment exploring a workflow for matching watch photos with catalog entries and looking up product and branch-stock details. Experimental and incomplete: not a production recognition system, and no accuracy claims. Shown with local demo data.</p>
+  </div>
+  <div class="mock" role="img" aria-label="Timepiece Stockroom prototype preview">
+    <div class="side"><b>Workspace</b><br>Scan a watch<br>Stockroom<br>Catalog</div>
+    <div class="main"><h3>Good morning. Local workspace.</h3><div class="drop">Photograph the dial and strap; we’ll search your reference collection.<br><span>Open camera</span></div></div>
+  </div>
+</article>
+</section>
+
+<section class="how" id="how">
+  <h2>How I work</h2>
+  <ol class="steps">
+    <li><h3>Understand</h3><p>Clarify the goal and audience.</p></li>
+    <li><h3>Shape</h3><p>Plan a practical user experience.</p></li>
+    <li><h3>Build</h3><p>Use AI tools thoughtfully; review the result.</p></li>
+    <li><h3>Refine</h3><p>Polish details and prepare a clear handoff.</p></li>
+  </ol>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Have a project in mind?</h2>
+  <p>Send me a message here on Fiverr.</p>
+</section>
+
+<footer><span>Kevin Osama · Web Development Portfolio</span><span>Cairo, Egypt</span></footer>
+</div>
+</body>
+</html>
